@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1446671344 source:c:\programming\figuras\resource.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1446671344 c:\programming\figuras\resource.h
+
+1481277009 source:c:\programming\figuras\main.cpp
+	<iostream>
+	<sstream>
+	<string>
+	<vector>
+	<fstream>
+	<cstddef>
+	<typeinfo>
+	<cctype>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"figura.hpp"
+	"functions.hpp"
+
+1481009145 source:c:\programming\figuras\figura.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<cctype>
+	<stdlib.h>
+	"figura.hpp"
+	"functions.hpp"
+
+1481009042 c:\programming\figuras\figura.hpp
+	<iostream>
+	<string>
+	<vector>
+
+1478853265 source:c:\programming\figuras\functions.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"functions.hpp"
+
+1478853265 c:\programming\figuras\functions.hpp
+	<iostream>
+	<string>
+
+1481012745 source:c:\users\cp1000\google drive\programming\figuras\figura.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<cctype>
+	<stdlib.h>
+	"figura.hpp"
+	"functions.hpp"
+
+1481012642 c:\users\cp1000\google drive\programming\figuras\figura.hpp
+	<iostream>
+	<string>
+	<vector>
+
+1478856865 c:\users\cp1000\google drive\programming\figuras\functions.hpp
+	<iostream>
+	<string>
+
+1478856865 source:c:\users\cp1000\google drive\programming\figuras\functions.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"functions.hpp"
+
+1481277009 source:c:\users\cp1000\google drive\programming\figuras\main.cpp
+	<iostream>
+	<sstream>
+	<string>
+	<vector>
+	<fstream>
+	<cstddef>
+	<typeinfo>
+	<cctype>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"figura.hpp"
+	"functions.hpp"
+
