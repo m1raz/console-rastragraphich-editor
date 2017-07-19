@@ -4,92 +4,96 @@
 
 using namespace std;
 
-class Figura{
-    public:
-        int id;
-        int visible;
+class Figure
+{
+public:
+    int id;
+    int visible;
 
-        int kontursR;
-        int kontursG;
-        int kontursB;
-        double kontursA;
+    int outlineR;
+    int outlineG;
+    int outlineB;
+    double outlineA;
 
-        int fonsR;
-        int fonsG;
-        int fonsB;
-        double fonsA;
+    int backgroundR;
+    int backgroundG;
+    int backgroundB;
+    double backgroundA;
 
-        int cordX;
-        int cordY;
-        int rotateDegree;
+    int cordX;
+    int cordY;
+    int rotateDegree;
 
-        int type; ///taisnsturis - 1; ovals - 2; poligons - 3
+    int type; ///Rectangle - 1; oval - 2; polygon - 3
 
-        void setKontursRGBA(int kontursR, int kontursG, int kontursB, double kontursA);
-        void setFonsRGBA(int R, int G, int B, double A);
-        void setCord(int X, int Y);
-        void rotate(int degree);
-        void setId(int id);
-        void hide(void);
-        int returnId(void);
-        void moveFigure(string direction, int number);
+    void setOutlineRGBA(int outlineR, int outlineG, int outlineB, double outlineA);
+    void setBackgroundRGBA(int R, int G, int B, double A);
+    void setCord(int X, int Y);
+    void rotate(int degree);
+    void setId(int id);
+    void hide(void);
+    int returnId(void);
+    void moveFigure(string direction, int number);
 
-        virtual void setMalas(int malaA, int malaB){};
-        virtual void setMalaA(int mala){};
-        virtual void setMalaB(int mala){};
-        virtual int returnMalaA(void){};
-        virtual int returnMalaB(void){};
-        virtual int returnRad1(void){};
-        virtual int returnRad2(void){};
-        virtual void setOvals(int rad1, int rad2){};
-        virtual void setRad1(int rad){};
-        virtual void setRad2(int rad){};
-        virtual void addCords(int X, int Y){};
-        virtual int deleteLastCords(void){};
-        virtual string draw(){};
-        virtual string showData(){};
+    virtual void setSides(int mSideA, int SideB) {};
+    virtual void setSideA(int side) {};
+    virtual void setSideB(int side) {};
+    virtual int returnSideA(void) {};
+    virtual int returnSideB(void) {};
+    virtual int returnRad1(void) {};
+    virtual int returnRad2(void) {};
+    virtual void setOval(int rad1, int rad2) {};
+    virtual void setRad1(int rad) {};
+    virtual void setRad2(int rad) {};
+    virtual void addCords(int X, int Y) {};
+    virtual int deleteLastCords(void) {};
+    virtual string draw() {};
+    virtual string showData() {};
 };
 
-class Taisnsturis : public Figura{
-    public:
-        int malaA;
-        int malaB;
-        Taisnsturis(int id);
-        ~Taisnsturis();
-        void setMalas(int malaA, int malaB);
-        void setMalaA(int mala);
-        void setMalaB(int mala);
-        int returnMalaA(void);
-        int returnMalaB(void);
-        string showData();
-        string draw();
+class Rectangle : public Figure
+{
+public:
+    int sideA;
+    int sideB;
+    Rectangle(int id);
+    ~Rectangle();
+    void setSides(int sideA, int sideB);
+    void setSideA(int side);
+    void setSideB(int side);
+    int returnSideA(void);
+    int returnSideB(void);
+    string showData();
+    string draw();
 };
 
-class Ovals : public Figura{
-    public:
-        int rad1;
-        int rad2;
-        Ovals(int id);
-        ~Ovals();
-        void setOvals(int rad1, int rad2);
-        void setRad1(int rad);
-        void setRad2(int rad);
-        void setRad(int Rad1, int Rad2);
-        int returnRad1(void);
-        int returnRad2(void);
-        string showData();
-        string draw();
+class Oval : public Figure
+{
+public:
+    int rad1;
+    int rad2;
+    Oval(int id);
+    ~Oval();
+    void setOval(int rad1, int rad2);
+    void setRad1(int rad);
+    void setRad2(int rad);
+    void setRad(int Rad1, int Rad2);
+    int returnRad1(void);
+    int returnRad2(void);
+    string showData();
+    string draw();
 };
 
 
-class Poligons : public Figura{
-    public:
-        vector<int> cordsX;
-        vector<int> cordsY;
-        Poligons(int id);
-        ~Poligons();
-        void addCords(int X, int Y);
-        int deleteLastCords(void);
-        string showData();
-        string draw();
+class Polygon : public Figure
+{
+public:
+    vector<int> cordsX;
+    vector<int> cordsY;
+    Polygon(int id);
+    ~Polygon();
+    void addCords(int X, int Y);
+    int deleteLastCords(void);
+    string showData();
+    string draw();
 };
